@@ -169,3 +169,6 @@ Open your browser and navigate to: **`http://localhost:5173`**
 cd backend
 npm test
 ```
+# News Website User Engagement Analysis 📰📊
+
+A full-stack web application designed for social and web analytics on digital news media websites. It computes key performance indicators (KPIs), tracks multi-stage reader navigation journeys, benchmarks journalistic category performance, detects audience drop-off points, and provides an automated, rule-based editorial recommendation engine.
