@@ -122,7 +122,7 @@ news-engagement-analytics/
 <td width="50%">
 
 **Engagement Heatmap & Cross-Matrices**
-![Heatmap & Matrices](./screenshots/heatmap-matrices.png)
+![Heatmap & Matrices](https://github.com/bibaswan2905/News-Website-User-Engagement-Analysis/blob/59650af6d4892f7cabb6c6206feebda14dd31a1a/heatmap-matrices.png)
 
 </td>
 <td width="50%">
