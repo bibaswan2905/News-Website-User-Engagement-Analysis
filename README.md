@@ -1,10 +1,61 @@
-# News Website User Engagement Analysis 📰📊
+<div align="center">
 
-A full-stack web application designed for social and web analytics on digital news media websites. It computes key performance indicators (KPIs), tracks multi-stage reader navigation journeys, benchmarks journalistic category performance, detects audience drop-off points, and provides an automated, rule-based editorial recommendation engine.
+# 📰 News Website User Engagement Analysis 📊
+
+**A full-stack analytics platform for digital news media — KPIs, reader journeys, editorial insights, and live traffic simulation, all in one dashboard.**
+
+![Node](https://img.shields.io/badge/Node.js-22%2B%20%7C%2024-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-backend-000000?style=flat-square&logo=express&logoColor=white)
+![React](https://img.shields.io/badge/React-frontend-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-dev%20server-646CFF?style=flat-square&logo=vite&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-native%20node%3Asqlite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-informational?style=flat-square)
+
+</div>
 
 ---
 
-## Architecture Overview
+## ✨ What Is This?
+
+This app turns raw reader telemetry — page views, sessions, scroll depth, clicks — into **decision-ready editorial intelligence**. It computes engagement KPIs, models a 4-stage reading funnel, benchmarks content across journalism categories, surfaces drop-off points, and generates automated, rule-based recommendations an editorial team can act on immediately.
+
+> Built to answer the question every newsroom asks: *"What are readers actually doing on our site — and what should we change?"*
+
+---
+
+## 🚀 Feature Highlights
+
+| | Feature | What It Does |
+|---|---|---|
+| 📈 | **KPI Engine** | Page views, sessions, unique visitors, bounce rate, session duration, and recommendation CTR — with automatic period-over-period % deltas |
+| 🧭 | **Navigation Funnel** | Tracks readers through 4 stages: Entry → Engaged Reading → Next Story Click → Deep Exploration |
+| 📉 | **Drop-Off Detection** | Scroll-depth retention curve (0–100%) plus top entry/exit pages with bounce & departure rates |
+| 🏆 | **Content Benchmarking** | Ranks stories across 6 categories, flags top 5 performers vs. bottom 5 underperformers |
+| 🔥 | **24/7 Heatmap** | Day × hour readership intensity, plus category × device cross-tabulation |
+| 🤖 | **Recommendation Engine** | Rule-based editorial & UX suggestions — mobile bounce fixes, monetization opportunities, newsletter targeting |
+| ⚡ | **Live Simulator** | Inject synthetic reader visits in real time and watch dashboards update instantly |
+
+---
+
+## 🧮 The Engagement Score
+
+Every article gets a single composite score blending reach, depth, and interaction:
+
+$$
+\text{Score} = \left(\frac{\text{Views}}{\text{MaxViews}} \times 35\right) + \left(\frac{\text{AvgTime}}{\text{TargetTime}} \times 30\right) + \left(\frac{\text{AvgScroll}}{100} \times 20\right) + \left(\frac{\text{CTR}}{25} \times 15\right)
+$$
+
+| Weight | Signal | Why It Matters |
+|---|---|---|
+| 35% | Views (relative to max) | Reach |
+| 30% | Avg. time on page | Depth of attention |
+| 20% | Avg. scroll depth | Content consumption |
+| 15% | Recommendation CTR | Discovery & retention |
+
+---
+
+## 🏗️ Architecture
 
 ```
 news-engagement-analytics/
@@ -50,125 +101,174 @@ news-engagement-analytics/
 
 ---
 
-## Key Features
+## 📸 Screenshots
 
-### 1. Analytics & Metrics Engine
-- **Summary KPIs**: Total Page Views, Total Sessions, Unique Visitors, Average Bounce Rate (%), Average Session Duration (mm:ss), Average Time on Page, and Recommendation Click-Through Rate (CTR).
-- **Period-over-Period Delta**: Automatically calculates % change compared to the identical preceding window (e.g. 7 days vs previous 7 days).
-- **Composite Engagement Score**:
-  $$\text{Score} = \left(\frac{\text{Views}}{\text{MaxViews}} \times 35\right) + \left(\frac{\text{AvgTime}}{\text{TargetTime}} \times 30\right) + \left(\frac{\text{AvgScroll}}{100} \times 20\right) + \left(\frac{\text{CTR}}{25} \times 15\right)$$
+<table>
+<tr>
+<td width="50%">
 
-### 2. User Navigation & Drop-Off Modeling
-- **4-Stage Reading Funnel**:
-  1. **Site Entry**: Inbound arrival across homepage, category hubs, or direct article links.
-  2. **Engaged Reading**: Sessions with dwell time $\ge 15$s or scroll depth $\ge 30\%$.
-  3. **Next Story Click**: Reader clicks an inline or recommended story.
-  4. **Deep Exploration**: High-loyalty readers viewing 3+ stories or $\ge 3$ minutes dwell time.
-- **Scroll Depth Retention Curve**: Vertical milestone completion at 0%, 25%, 50%, 75%, and 100%.
-- **Entry & Departure Tracking**: Top landing URLs with bounce rates and top exit pages with departure percentages.
+**Executive Overview**
+![Executive Overview](./screenshots/overview-dashboard.png)
 
-### 3. Content Beat Performance
-- Ranks articles across 6 journalism categories: **Politics, Tech, Entertainment, Sports, Business, and Science**.
-- Identifies Top 5 High-Performing vs. Top 5 Underperforming articles with direct drilldown inspection.
-- Interactive, sortable, and searchable master telemetry table.
+</td>
+<td width="50%">
 
-### 4. 24/7 Engagement Heatmap & Cross-Matrices
-- Day-of-week (Sunday to Saturday) vs. Hour-of-day (00:00 to 23:00) readership intensity matrix.
-- Category $\times$ Device cross-tabulation comparing desktop, mobile, and tablet reading patterns.
+**Content Performance & Ranking**
+![Content Performance](./screenshots/content-performance.png)
 
-### 5. Automated Recommendation Engine
-- Generates data-driven editorial and UX suggestions:
-  - High Mobile Bounce mitigation (lazy load banners, readability mode).
-  - High Dwell Time / Low CTR monetisation (contextual mid-article recommendation cards).
-  - Reader drop-off at article midpoint (visual breaks, pull quotes).
-  - High-loyalty newsletter acquisition opportunities.
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-### 6. Real-Time Traffic Simulator
-- Inject synthetic reader visits (Mobile/Desktop, Engaged/Bounced, Category) and watch live charts and counters update immediately.
-- Optional automated continuous background stream.
+**Engagement Heatmap & Cross-Matrices**
+![Heatmap & Matrices](./screenshots/heatmap-matrices.png)
+
+</td>
+<td width="50%">
+
+**Automated Insights & Action Plan**
+![Insights & Actions](./screenshots/insights-actions.png)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Live Traffic Simulator**
+![Live Traffic Simulator](./screenshots/live-traffic-simulator.png)
+
+</td>
+<td width="50%">
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Database Model (SQLite)
+## 🗺️ The Reading Funnel
 
-- **`articles`**: `id`, `slug`, `title`, `category`, `author`, `publish_date`, `read_time_min`, `word_count`, `summary`, `tags`.
-- **`user_sessions`**: `session_id`, `user_id`, `entry_page`, `exit_page`, `duration`, `bounce_status`, `device_type`, `traffic_source`, `country`, `created_at`.
-- **`page_views`**: `view_id`, `session_id`, `article_id`, `page_url`, `timestamp`, `time_spent`, `scroll_depth_pct`, `clicked_recommendation`.
+```mermaid
+flowchart LR
+    A["🚪 Site Entry\n Homepage · Category Hub · Direct Link"] --> B["📖 Engaged Reading\n Dwell ≥15s or Scroll ≥30%"]
+    B --> C["👉 Next Story Click\n Inline or recommended story"]
+    C --> D["🏅 Deep Exploration\n 3+ stories or ≥3 min dwell"]
+```
+
+Paired with a **scroll-depth retention curve** at 0%, 25%, 50%, 75%, and 100% milestones, plus top entry pages (with bounce rate) and top exit pages (with departure %).
 
 ---
 
-## REST API Endpoints
+## 🗄️ Database Model (SQLite)
+
+<details>
+<summary><strong>📄 articles</strong></summary>
+
+`id` · `slug` · `title` · `category` · `author` · `publish_date` · `read_time_min` · `word_count` · `summary` · `tags`
+</details>
+
+<details>
+<summary><strong>👤 user_sessions</strong></summary>
+
+`session_id` · `user_id` · `entry_page` · `exit_page` · `duration` · `bounce_status` · `device_type` · `traffic_source` · `country` · `created_at`
+</details>
+
+<details>
+<summary><strong>👁️ page_views</strong></summary>
+
+`view_id` · `session_id` · `article_id` · `page_url` · `timestamp` · `time_spent` · `scroll_depth_pct` · `clicked_recommendation`
+</details>
+
+---
+
+## 🔌 REST API Reference
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
 | `GET` | `/api/health` | Service health status |
-| `GET` | `/api/metrics` | Summary KPIs, period deltas, timeline points, and category/device breakdown |
-| `GET` | `/api/content-performance` | Ranked articles, category benchmark bar data, top & underperformers |
+| `GET` | `/api/metrics` | Summary KPIs, period deltas, timeline points, category/device breakdown |
+| `GET` | `/api/content-performance` | Ranked articles, category benchmark bars, top & underperformers |
 | `GET` | `/api/user-navigation` | 4-stage journey funnel, scroll retention curve, entry/exit drop-offs |
-| `GET` | `/api/recommendations` | Automated actionable editorial & UX recommendations |
-| `GET` | `/api/heatmap` | 24/7 hourly readership matrix and category x device cross-matrix |
-| `GET` | `/api/articles/:id` | Detailed telemetry and diagnostic feedback for a single story |
-| `POST` | `/api/simulate-event` | Inject simulated reader visits into live database |
-| `POST` | `/api/reset-data` | Re-seed database with standard baseline dataset |
+| `GET` | `/api/recommendations` | Automated editorial & UX recommendations |
+| `GET` | `/api/heatmap` | 24/7 hourly readership matrix and category × device cross-matrix |
+| `GET` | `/api/articles/:id` | Detailed telemetry & diagnostics for a single story |
+| `POST` | `/api/simulate-event` | Inject simulated reader visits into the live database |
+| `POST` | `/api/reset-data` | Re-seed database with the standard baseline dataset |
 
-**Query Parameters Supported on GET endpoints**:
-- `dateRange`: `today`, `7d`, `30d` (default), `90d`
-- `category`: `all` (default), `Politics`, `Tech`, `Entertainment`, `Sports`, `Business`, `Science`
-- `deviceType`: `all` (default), `desktop`, `mobile`, `tablet`
-- `sortBy`: `views`, `avgTimeSpent`, `avgScrollDepth`, `ctr`, `engagementScore` (default)
-- `order`: `desc` (default), `asc`
+**Query parameters** (supported on `GET` endpoints):
+
+| Param | Values |
+|---|---|
+| `dateRange` | `today` · `7d` · `30d` *(default)* · `90d` |
+| `category` | `all` *(default)* · `Politics` · `Tech` · `Entertainment` · `Sports` · `Business` · `Science` |
+| `deviceType` | `all` *(default)* · `desktop` · `mobile` · `tablet` |
+| `sortBy` | `views` · `avgTimeSpent` · `avgScrollDepth` · `ctr` · `engagementScore` *(default)* |
+| `order` | `desc` *(default)* · `asc` |
 
 ---
 
-## How to Run Locally
+## ⚙️ Getting Started
 
 ### Prerequisites
-- **Node.js**: v22.x or v24.x (Native `node:sqlite` requires Node 22+)
-- **npm**: v10+
 
-### Step 1: Clone or Navigate to Directory
+- **Node.js** v22.x or v24.x — native `node:sqlite` requires Node 22+
+- **npm** v10+
+
+### 1️⃣ Clone the repo
+
 ```bash
 cd news-engagement-analytics
 ```
 
-### Step 2: Install Dependencies
+### 2️⃣ Install dependencies
+
 ```bash
-# Install backend dependencies
+# Backend
 cd backend
 npm install
 
-# Install frontend dependencies
+# Frontend
 cd ../frontend
 npm install
 ```
 
-### Step 3: Seed Database (Optional - Pre-seeded on first run)
+### 3️⃣ Seed the database *(optional — pre-seeded on first run)*
+
 ```bash
 cd backend
 npm run seed
 ```
 
-### Step 4: Run the Application
+### 4️⃣ Run it
 
-In **Terminal 1** (Start Backend on Port 5000):
-```bash
-cd backend
-npm start
-```
+| Terminal | Command | Runs On |
+|---|---|---|
+| 1 — Backend | `cd backend && npm start` | `http://localhost:5000` |
+| 2 — Frontend | `cd frontend && npm run dev` | `http://localhost:5173` |
 
-In **Terminal 2** (Start Frontend on Port 5173):
-```bash
-cd frontend
-npm run dev
-```
+Then open **[http://localhost:5173](http://localhost:5173)** 🎉
 
-Open your browser and navigate to: **`http://localhost:5173`**
+### 5️⃣ Run the test suite
 
-### Step 5: Run Automated Tests
 ```bash
 cd backend
 npm test
 ```
-# News Website User Engagement Analysis 📰📊
 
-A full-stack web application designed for social and web analytics on digital news media websites. It computes key performance indicators (KPIs), tracks multi-stage reader navigation journeys, benchmarks journalistic category performance, detects audience drop-off points, and provides an automated, rule-based editorial recommendation engine.
+---
+
+## 🤖 What the Recommendation Engine Catches
+
+- 📱 **High mobile bounce** → suggests lazy-loaded banners & readability mode
+- ⏱️ **High dwell time, low CTR** → suggests contextual mid-article recommendation cards
+- 📉 **Mid-article drop-off** → suggests visual breaks & pull quotes
+- 💌 **High-loyalty readers** → flags newsletter acquisition opportunities
+
+---
+
+<div align="center">
+
+Made for newsrooms that want to *understand* their readers, not just count them.
+
+</div>
