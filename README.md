@@ -114,7 +114,7 @@ news-engagement-analytics/
 <td width="50%">
 
 **Content Performance & Ranking**
-![Content Performance](./screenshots/content-performance.png)
+![Content Performance](https://github.com/bibaswan2905/News-Website-User-Engagement-Analysis/blob/917e134b41110d06eee3880378150536c3619167/content-performance.png)
 
 </td>
 </tr>
