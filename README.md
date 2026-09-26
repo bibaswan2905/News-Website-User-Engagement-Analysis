@@ -128,7 +128,7 @@ news-engagement-analytics/
 <td width="50%">
 
 **Automated Insights & Action Plan**
-![Insights & Actions](./screenshots/insights-actions.png)
+![Insights & Actions](https://github.com/bibaswan2905/News-Website-User-Engagement-Analysis/blob/eba4225de3e3e8806a7b195829fe19470418c8eb/insights-actions.png)
 
 </td>
 </tr>
