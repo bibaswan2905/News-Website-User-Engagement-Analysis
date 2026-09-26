@@ -136,7 +136,7 @@ news-engagement-analytics/
 <td width="50%">
 
 **Live Traffic Simulator**
-![Live Traffic Simulator](./screenshots/live-traffic-simulator.png)
+![Live Traffic Simulator](https://github.com/bibaswan2905/News-Website-User-Engagement-Analysis/blob/80700c30ada33869b5102bf0554879060ccd5de6/live-traffic-simulator.png)
 
 </td>
 <td width="50%">
