@@ -108,7 +108,7 @@ news-engagement-analytics/
 <td width="50%">
 
 **Executive Overview**
-![Executive Overview](./screenshots/overview-dashboard.png)
+![Executive Overview](https://github.com/bibaswan2905/News-Website-User-Engagement-Analysis/blob/bde45fc05c324e44f316bea79b981288812beafc/overview-dashboard.png)
 
 </td>
 <td width="50%">
